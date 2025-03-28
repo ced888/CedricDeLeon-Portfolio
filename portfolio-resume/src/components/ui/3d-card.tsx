@@ -30,9 +30,10 @@ export const CardContainer = ({
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!containerRef.current) return;
-    let ms = parseInt(`${mouseSensitivity}`);
     const { left, top, width, height } =
       containerRef.current.getBoundingClientRect();
+
+    let ms = parseInt(`${mouseSensitivity}`);
     const x = (e.clientX - left - width / 2) / ms;
     const y = (e.clientY - top - height / 2) / ms;
     containerRef.current.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
