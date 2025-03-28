@@ -18,20 +18,23 @@ export const CardContainer = ({
   children,
   className,
   containerClassName,
+  mouseSensitivity = 25,
 }: {
   children?: React.ReactNode;
   className?: string;
   containerClassName?: string;
+  mouseSensitivity?: number | string;
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [isMouseEntered, setIsMouseEntered] = useState(false);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!containerRef.current) return;
+    let ms = parseInt(`${mouseSensitivity}`);
     const { left, top, width, height } =
       containerRef.current.getBoundingClientRect();
-    const x = (e.clientX - left - width / 2) / 25;
-    const y = (e.clientY - top - height / 2) / 25;
+    const x = (e.clientX - left - width / 2) / ms;
+    const y = (e.clientY - top - height / 2) / ms;
     containerRef.current.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
   };
 
