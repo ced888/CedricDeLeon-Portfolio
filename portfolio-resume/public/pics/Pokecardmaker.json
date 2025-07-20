@@ -1,0 +1,50 @@
+{
+  "name": "",
+  "subname": "",
+  "images": [],
+  "backgroundColor": "white",
+  "cardNumber": "",
+  "totalInSet": "",
+  "hitpoints": "",
+  "illustrator": "Cedric De Leon",
+  "weaknessAmount": 2,
+  "weaknessModifier": "×",
+  "resistanceAmount": 30,
+  "resistanceModifier": "-",
+  "retreatCost": 1,
+  "dexStats": "Developer, gamer, anime watcher, overall cool guy",
+  "dexEntry": "",
+  "moves": [
+    {
+      "id": "iIj92YCgTTasgL7oQGrze",
+      "name": "Developer Mode ",
+      "description": "The following user can dish out websites in a jam!\nIf faced with a challenge, he never backs down and will complete any deliverable!",
+      "order": 0,
+      "isAbility": true,
+      "type": "default"
+    },
+    {
+      "id": "jiXYAGenoOxXtBYJl24Jp",
+      "type": "default",
+      "name": "Hobbies",
+      "description": "I enjoy rock climbing, running, watching anime, travelling and learning languages!",
+      "damageAmount": "5",
+      "energyCost": [
+        {
+          "amount": 1,
+          "typeId": 11
+        }
+      ],
+      "order": 1,
+      "isAbility": false
+    }
+  ],
+  "baseSetId": 3,
+  "supertypeId": 1,
+  "typeId": 1,
+  "subtypeId": 1,
+  "weaknessTypeId": 2,
+  "setIconId": 1,
+  "rotationIconId": 1,
+  "rarityIconId": 1
+}
