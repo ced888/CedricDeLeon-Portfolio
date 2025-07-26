@@ -54,30 +54,30 @@ export default function Home() {
           let mouseSens = 100;
           // Center card is larger and more prominent
           if (idx === 2) {
-            positionClass += "w-auto sm:w-[30rem] h-[42rem] scale-110 rotate-0 z-10 shadow-2xl";
+            positionClass += "w-auto w-[23vw] h-[42rem] scale-110 rotate-0 z-10 shadow-2xl";
             mouseSens = 100;
           }
           // Left card is slightly rotated and smaller 
           else if (idx === 1) {
-            positionClass += "w-auto sm:w-[20rem] h-[30rem] -rotate-5 z-0 mt-5";
+            positionClass += "w-auto w-[15vw] h-[30rem] -rotate-5 z-0 mt-5";
             mouseSens = 15;
           } 
           //Right card is also slightly rotated and smaller
           else if (idx === 3) {
-            positionClass += "w-auto sm:w-[20rem] h-[30rem] rotate-5 z-0 mt-5";
+            positionClass += "w-auto w-[15vw] h-[30rem] rotate-5 z-0 mt-5";
             mouseSens = 15;
           } 
           // Other cards are smaller and less prominent
           else if (idx === 4) {
-            positionClass += "w-auto sm:w-[15rem] h-[20rem] rotate-8 opacity-90 mt-20";
+            positionClass += "w-auto w-[12vw] h-[20rem] rotate-8 opacity-90 mt-20";
             mouseSens = 5;
           }
           else if (idx === 0) {
-            positionClass += "w-auto sm:w-[15rem] h-[20rem] -rotate-8 opacity-90 mt-20";
+            positionClass += "w-auto w-[12vw] h-[20rem] -rotate-8 opacity-90 mt-20";
             mouseSens = 5;
           }
           else {
-            positionClass += "w-auto sm:w-[15rem] h-[20rem] opacity-90";
+            positionClass += "w-auto w-[12vw] h-[20rem] opacity-90";
           }
 
           const isCentered = idx === 2 && centerKey !== null;
