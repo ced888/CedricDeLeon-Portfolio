@@ -54,17 +54,17 @@ export default function Home() {
           let mouseSens = 100;
           // Center card is larger and more prominent
           if (idx === 2) {
-            positionClass += "w-auto w-[23vw] h-[42rem] scale-110 rotate-0 z-10 shadow-2xl";
+            positionClass += "w-auto w-[25vw] h-[42rem] scale-110 rotate-0 z-10 shadow-2xl";
             mouseSens = 100;
           }
           // Left card is slightly rotated and smaller 
           else if (idx === 1) {
-            positionClass += "w-auto w-[15vw] h-[30rem] -rotate-5 z-0 mt-5";
+            positionClass += "w-auto w-[15vw] h-[25rem] -rotate-5 z-0 mt-5";
             mouseSens = 15;
           } 
           //Right card is also slightly rotated and smaller
           else if (idx === 3) {
-            positionClass += "w-auto w-[15vw] h-[30rem] rotate-5 z-0 mt-5";
+            positionClass += "w-auto w-[15vw] h-[25rem] rotate-5 z-0 mt-5";
             mouseSens = 15;
           } 
           // Other cards are smaller and less prominent
@@ -88,7 +88,7 @@ export default function Home() {
               onClick={() => {if (!isCentered) setCenterKey(key); }}
               style={{ cursor: !isCentered ? "pointer" : "default" }}
             >
-              <CardComponent mouseSensitivity={mouseSens} className={positionClass}/>
+              <CardComponent mouseSensitivity={mouseSens} className={positionClass} isCentered={isCentered}/>
             </div>
           );
         })}

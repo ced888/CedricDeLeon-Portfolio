@@ -1,8 +1,11 @@
 import Image from "next/image";
 import { CardBody, CardContainer, CardItem } from "../ui/3d-card";
 
-export function BlogCard({ className = "", mouseSensitivity = 0 }: { className?: string, mouseSensitivity?: number }) {
-  return (
+export function BlogCard({ className = "", mouseSensitivity = 0, isCentered = false }: { className?: string, mouseSensitivity?: number, isCentered?: boolean }) {
+    if (isCentered) {
+        return "hello";
+    }  
+    return (
     <CardContainer className="" mouseSensitivity={mouseSensitivity}>
         <CardBody className={`bg-red-50 relative group/card 
             dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] 

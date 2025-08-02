@@ -1,13 +1,18 @@
 import Image from "next/image";
 import { CardBody, CardContainer, CardItem } from "../ui/3d-card";
 
-export function ProfileCard({ className = "", mouseSensitivity = 0 }: { className?: string, mouseSensitivity?: number }) {
+export function ProfileCard({ className = "", mouseSensitivity = 0, isCentered = false }: { className?: string, mouseSensitivity?: number, isCentered?: boolean }) {
     const handleTryNow = () => {
     // Replace with your logic, e.g., navigate or open modal
     window.open("https://www.google.com/search?q=cat&rlz=1C1GCEA_enCA1156CA1156&oq=cat&gs_lcrp=EgZjaHJvbWUqBwgAEAAYjwIyBwgAEAAYjwIyCggBEC4YsQMYgAQyBwgCEAAYgAQyEwgDEC4YgwEYxwEYsQMY0QMYgAQyDQgEEC4YrwEYxwEYgAQyEAgFEC4YrwEYxwEYgAQYjgUyDQgGEAAYgwEYsQMYgAQyBggHEEUYPdIBCDEwNzBqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8", "_blank");
   };
-  return (
+  // if (isCentered) {
+  //   return "hello";
+  // }
+
+  return (    
     <CardContainer className="" mouseSensitivity={mouseSensitivity}>
+      
       <CardBody className={`bg-gray-50 relative group/card 
         dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] 
         dark:bg-black dark:border-white/[0.2] border-black/[0.3] 
@@ -21,7 +26,7 @@ export function ProfileCard({ className = "", mouseSensitivity = 0 }: { classNam
             src="/pics/Pokecardmaker.png"
             height="3000"
             width="1000"
-            className="h-full w-full object-cover rounded-xl group-hover/card:shadow-xl"
+            className="w-full object-cover rounded-xl group-hover/card:shadow-xl"
             alt="thumbnail"
           />
         </CardItem>
