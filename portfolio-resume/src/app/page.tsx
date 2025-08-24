@@ -43,7 +43,7 @@ export default function Home() {
       initial={{ opacity: 0.0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{
-        delay: 0.2,
+        delay: 0.1,
         duration: 0.6,
         ease: "easeInOut",
       }}>
@@ -55,7 +55,7 @@ export default function Home() {
           // Center card is larger and more prominent
           if (idx === 2) {
             positionClass += "w-auto w-[25vw] h-[35vw] scale-110 rotate-0 z-10 shadow-2xl";
-            mouseSens = 100;
+            mouseSens = 300;
           }
           // Left card is slightly rotated and smaller 
           else if (idx === 1) {
@@ -70,11 +70,11 @@ export default function Home() {
           // Other cards are smaller and less prominent
           else if (idx === 4) {
             positionClass += "w-auto w-[12vw] h-[20vw] rotate-8 opacity-90 mt-30";
-            mouseSens = 5;
+            mouseSens = 10;
           }
           else if (idx === 0) {
             positionClass += "w-auto w-[12vw] h-[20vw] -rotate-8 opacity-90 mt-30";
-            mouseSens = 5;
+            mouseSens = 10;
           }
           else {
             positionClass += "w-auto w-[12vw] h-[20vw] opacity-90";

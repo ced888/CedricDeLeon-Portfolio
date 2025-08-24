@@ -13,17 +13,14 @@ export function ProfileCard({ className = "", mouseSensitivity = 0, isCentered =
   return (    
     <CardContainer className="" mouseSensitivity={mouseSensitivity}>
       
-      <CardBody className={`bg-gray-50 relative group/card 
-        dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] 
-        dark:bg-black dark:border-white/[0.2] border-black/[0.3] 
-        rounded-xl border ${className}`}>
+      <CardBody className={`relative group/card ${className}`}>
         <CardItem
           translateZ="50"
           position="absolute"
           className="h-full w-full flex items-center justify-center"
         >
           <Image
-            src="/pics/Pokecardmaker.png"
+            src="/pics/pokecards/CedricDeLeon.png"
             height="3000"
             width="1000"
             className="w-full object-cover rounded-xl group-hover/card:shadow-xl"
