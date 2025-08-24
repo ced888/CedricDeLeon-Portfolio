@@ -47,37 +47,37 @@ export default function Home() {
         duration: 0.6,
         ease: "easeInOut",
       }}>
-      <main className="w-screen mx-auto justify-evenly pt-6 px-32 flex gap-12 overflow-visible">
+      <main className="w-screen mx-auto justify-center pt-6 px-32 flex gap-14 overflow-visible">
         {orderedCards.map(({ key, component: CardComponent }, idx) => {
           // Assign styles based on position
           let positionClass = "transition-transform ease-in-out duration-500";
           let mouseSens = 100;
           // Center card is larger and more prominent
           if (idx === 2) {
-            positionClass += "w-auto w-[25vw] h-[42rem] scale-110 rotate-0 z-10 shadow-2xl";
+            positionClass += "w-auto w-[25vw] h-[35vw] scale-110 rotate-0 z-10 shadow-2xl";
             mouseSens = 100;
           }
           // Left card is slightly rotated and smaller 
           else if (idx === 1) {
-            positionClass += "w-auto w-[15vw] h-[25rem] -rotate-5 z-0 mt-5";
+            positionClass += "w-auto w-[15vw] h-[22vw] -rotate-4 z-0 mt-10";
             mouseSens = 15;
           } 
           //Right card is also slightly rotated and smaller
           else if (idx === 3) {
-            positionClass += "w-auto w-[15vw] h-[25rem] rotate-5 z-0 mt-5";
+            positionClass += "w-auto w-[15vw] h-[22vw] rotate-4 z-0 mt-10";
             mouseSens = 15;
           } 
           // Other cards are smaller and less prominent
           else if (idx === 4) {
-            positionClass += "w-auto w-[12vw] h-[20rem] rotate-8 opacity-90 mt-20";
+            positionClass += "w-auto w-[12vw] h-[20vw] rotate-8 opacity-90 mt-30";
             mouseSens = 5;
           }
           else if (idx === 0) {
-            positionClass += "w-auto w-[12vw] h-[20rem] -rotate-8 opacity-90 mt-20";
+            positionClass += "w-auto w-[12vw] h-[20vw] -rotate-8 opacity-90 mt-30";
             mouseSens = 5;
           }
           else {
-            positionClass += "w-auto w-[12vw] h-[20rem] opacity-90";
+            positionClass += "w-auto w-[12vw] h-[20vw] opacity-90";
           }
 
           const isCentered = idx === 2 && centerKey !== null;

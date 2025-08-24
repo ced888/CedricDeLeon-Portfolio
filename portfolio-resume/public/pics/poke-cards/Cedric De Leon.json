@@ -1,0 +1,70 @@
+{
+  "name": "Cedric De Leon",
+  "subname": "",
+  "images": [
+    {
+      "id": "cNp9ccR7g7muOw8CuR-hF",
+      "file": {},
+      "behindTemplate": true,
+      "order": 1,
+      "opacity": 1,
+      "croppedArea": {
+        "x": -3.2971755464058012,
+        "y": 18.559023211250167,
+        "width": 106.09085831902235,
+        "height": 83.33409675691557
+      }
+    }
+  ],
+  "backgroundColor": "white",
+  "cardNumber": "1",
+  "totalInSet": "5",
+  "hitpoints": "",
+  "illustrator": "",
+  "weaknessAmount": 2,
+  "weaknessModifier": "×",
+  "resistanceAmount": 30,
+  "resistanceModifier": "-",
+  "retreatCost": 1,
+  "dexEntry": "",
+  "moves": [
+    {
+      "id": "RBTKC4ajKGu7g1w3WVaUN",
+      "name": "Developer Mode",
+      "description": "The following user can dish out websites in a jam! \nIf faced with a challenge, he never backs down and will complete any deliverable!",
+      "order": 0,
+      "isAbility": true,
+      "type": "default"
+    },
+    {
+      "id": "vPpbMX9aYj0eBAlPxQ7ho",
+      "type": "default",
+      "name": "Hobbies",
+      "description": "I enjoy rock climbing, running, watching anime, travelling and learning languages!",
+      "damageAmount": "20",
+      "energyCost": [
+        {
+          "amount": 1,
+          "typeId": 1
+        },
+        {
+          "amount": 1,
+          "typeId": 11
+        }
+      ],
+      "order": 1,
+      "isAbility": false
+    }
+  ],
+  "baseSetId": 3,
+  "supertypeId": 1,
+  "typeId": 1,
+  "subtypeId": 1,
+  "weaknessTypeId": 2,
+  "setIconId": 1,
+  "rotationIconId": 1,
+  "rarityIconId": 1,
+  "rarityId": 2,
+  "flareIconId": 0,
+  "badgeIconId": 0
+}
