@@ -9,7 +9,7 @@ export function ProjectCard({ className = "", mouseSensitivity = 0, isCentered =
             <CardBody className={`bg-gray-50 relative group/card 
                       dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] 
                       dark:bg-black dark:border-white/[0.2] border-black/[0.3] 
-                      rounded-xl p-6 border ${className}`}>
+                      rounded-xl p-6 border overflow-y-auto ${className}`}>
               <motion.div 
               initial={{ opacity: 0.0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}

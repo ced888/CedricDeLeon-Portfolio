@@ -51,29 +51,29 @@ export default function Home() {
         {orderedCards.map(({ key, component: CardComponent }, idx) => {
           // Assign styles based on position
           let positionClass = "transition-transform ease-in-out duration-500";
-          let mouseSens = 100;
+          let mouseSens = 0;
           // Center card is larger and more prominent
           if (idx === 2) {
             positionClass += "w-auto w-[25vw] h-[35vw] scale-110 rotate-0 z-10 shadow-2xl";
-            mouseSens = 300;
+            mouseSens = 0;
           }
           // Left card is slightly rotated and smaller 
           else if (idx === 1) {
-            positionClass += "w-auto w-[15vw] h-[22vw] -rotate-4 z-0 mt-10";
+            positionClass += "w-auto w-[15vw] h-[22vw] -rotate-4 z-0 mt-[12vh]";
             mouseSens = 15;
           } 
           //Right card is also slightly rotated and smaller
           else if (idx === 3) {
-            positionClass += "w-auto w-[15vw] h-[22vw] rotate-4 z-0 mt-10";
+            positionClass += "w-auto w-[15vw] h-[22vw] rotate-4 z-0 mt-[12vh]";
             mouseSens = 15;
           } 
           // Other cards are smaller and less prominent
           else if (idx === 4) {
-            positionClass += "w-auto w-[12vw] h-[20vw] rotate-8 opacity-90 mt-30";
+            positionClass += "w-auto w-[12vw] h-[20vw] rotate-8 opacity-90 mt-[18vh]";
             mouseSens = 10;
           }
           else if (idx === 0) {
-            positionClass += "w-auto w-[12vw] h-[20vw] -rotate-8 opacity-90 mt-30";
+            positionClass += "w-auto w-[12vw] h-[20vw] -rotate-8 opacity-90 mt-[18vh]";
             mouseSens = 10;
           }
           else {
@@ -83,12 +83,14 @@ export default function Home() {
           const isCentered = idx === 2 && centerKey !== null;
 
           return (
+            <div>
             <div
               key={key}
               onClick={() => {if (!isCentered) setCenterKey(key); }}
               style={{ cursor: !isCentered ? "pointer" : "default" }}
             >
-              <CardComponent mouseSensitivity={mouseSens} className={positionClass} isCentered={isCentered}/>
+                <CardComponent mouseSensitivity={mouseSens} className={positionClass} isCentered={isCentered}/>
+            </div>
             </div>
           );
         })}
