@@ -31,9 +31,10 @@ export function ProjectCard({ className = "", mouseSensitivity = 0, isCentered =
                 >
                   Hover over this card to unleash the power of CSS perspective
                 </CardItem>
+                {/* Maybe add bento grid here */}
                 <CardItem
                   translateZ="50"
-                  className="w-60 mt-4"
+                  className="p-2 rounded-xl border mt-4"
                 >
                   Hello Test description
                 </CardItem>

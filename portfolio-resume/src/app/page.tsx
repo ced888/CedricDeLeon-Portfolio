@@ -54,7 +54,7 @@ export default function Home() {
           let mouseSens = 0;
           // Center card is larger and more prominent
           if (idx === 2) {
-            positionClass += "w-auto w-[25vw] h-[35vw] scale-110 rotate-0 z-10 shadow-2xl";
+            positionClass += "w-auto w-[28vw] h-[39vw] rotate-0 z-10 shadow-2xl";
             mouseSens = 0;
           }
           // Left card is slightly rotated and smaller 
