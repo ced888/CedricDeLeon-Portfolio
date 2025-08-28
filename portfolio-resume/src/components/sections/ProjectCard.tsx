@@ -14,7 +14,6 @@ export function ProjectCard({
   isCentered?: boolean;
 }) {
   const [selectedIdx, setSelectedIdx] = useState<number | null>(null);
-
   if (isCentered) {
     return (
       <CardContainer className="" mouseSensitivity={mouseSensitivity}>
@@ -24,6 +23,10 @@ export function ProjectCard({
             dark:bg-black dark:border-white/[0.2] border-black/[0.3] 
             rounded-xl p-6 border overflow-y-auto ${className}`}
         >
+          <CardItem>
+            {/* TODO: remove card item and fix center positioning*/}
+            <Image src="/pics/pokecards/Resume.png" height="0" width="0" className="w-0" alt="" />
+          </CardItem>
           <motion.div
             initial={{ opacity: 0.0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -78,39 +81,39 @@ function Projects({selectedIdx,setSelectedIdx,}: {selectedIdx: number | null; se
   return (
     <div className={`grid ${selectedIdx === null ? "grid-cols-1 md:grid-cols-2" : ""} gap-4 mt-6`}>
       {selectedIdx === null
-        ? projectList.map((project:projectProps, idx) => (
-          <button
-            className="bg-white dark:bg-gray-900 rounded-lg shadow p-4 flex flex-col items-center hover:ring-2 ring-blue-400 transition-all"
-            onClick={() => setSelectedIdx(idx)}
-          >
-            <div className="w-full h-40 bg-gray-200 dark:bg-gray-800 rounded mb-2 flex items-center justify-center overflow-y-auto"
-              key={project.title}>
-              <Image
-                src={project.image}
-                alt={project.title}
-                width={80}
-                height={80}
-                className="object-cover rounded"
-              />
-            </div>
-            <h3 className="font-semibold text-base text-gray-800 dark:text-white mb-1">
-              {project.title}
-            </h3>
-            <p className="text-xs text-gray-500 dark:text-gray-300 text-center">
-              {project.description}
-            </p>
-          </button>
-        ))
+        ? projectList.map((project: projectProps, idx) => (
+            <button
+              key={project.title}
+              className="bg-white dark:bg-gray-900 rounded-lg shadow p-4 flex flex-col items-center hover:ring-2 ring-blue-400 transition-all"
+              onClick={() => setSelectedIdx(idx)}
+            >
+              <div 
+                className="w-full h-40 bg-gray-200 dark:bg-gray-800 rounded mb-2 flex items-center justify-center overflow-y-auto">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  width={80}
+                  height={80}
+                  className="object-cover rounded"
+                />
+              </div>
+              <h3 className="font-semibold text-base text-gray-800 dark:text-white mb-1">
+                {project.title}
+              </h3>
+              <p className="text-xs text-gray-500 dark:text-gray-300 text-center">
+                {project.description}
+              </p>
+            </button>
+          ))
         : (
-          <div className="col-span-2 bg-white dark:bg-gray-900 rounded-lg shadow p-6 flex flex-col items-center animate-in fade-in">
+          <div key={projectList[selectedIdx].title} className="col-span-2 bg-white dark:bg-gray-900 rounded-lg shadow p-6 flex flex-col items-center animate-in fade-in">
             <button
               className="self-end mb-2 px-3 py-1 text-s rounded bg-gray-200 dark:bg-gray-700"
               onClick={() => setSelectedIdx(null)}
             >
               ← Back
             </button>
-            <div className="w-full h-48 bg-gray-200 dark:bg-gray-800 rounded mb-4 flex items-center justify-center overflow-hidden"
-              key={projectList[selectedIdx].title}>
+            <div className="w-full h-48 bg-gray-200 dark:bg-gray-800 rounded mb-4 flex items-center justify-center overflow-hidden">
               <Image
                 src={projectList[selectedIdx].image}
                 alt={projectList[selectedIdx].title}

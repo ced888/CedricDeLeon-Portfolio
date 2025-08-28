@@ -2,14 +2,15 @@ import Image from "next/image";
 import { CardBody, CardContainer, CardItem } from "../ui/3d-card";
 import { BackgroundGradient } from "../ui/background-gradient";
 
-export function ProfileCard({ className = "", mouseSensitivity = 0, isCentered = false }: { className?: string, mouseSensitivity?: number, isCentered?: boolean }) {
-    const handleTryNow = () => {
-    // Replace with your logic, e.g., navigate or open modal
-    window.open("https://www.google.com/search?q=cat&rlz=1C1GCEA_enCA1156CA1156&oq=cat&gs_lcrp=EgZjaHJvbWUqBwgAEAAYjwIyBwgAEAAYjwIyCggBEC4YsQMYgAQyBwgCEAAYgAQyEwgDEC4YgwEYxwEYsQMY0QMYgAQyDQgEEC4YrwEYxwEYgAQyEAgFEC4YrwEYxwEYgAQYjgUyDQgGEAAYgwEYsQMYgAQyBggHEEUYPdIBCDEwNzBqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8", "_blank");
-  };
-  if (isCentered) {
-    mouseSensitivity = 100;
-  }
+export function ProfileCard({ 
+  className = "", 
+  mouseSensitivity = 0, 
+  isCentered = false 
+  }: { 
+    className?: string, 
+    mouseSensitivity?: number, 
+    isCentered?: boolean 
+  }) {
 
   return (
     <CardContainer className="" mouseSensitivity={mouseSensitivity}>

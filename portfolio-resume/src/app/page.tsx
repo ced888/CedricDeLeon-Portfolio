@@ -79,18 +79,15 @@ export default function Home() {
           else {
             positionClass += "w-auto w-[12vw] h-[20vw] opacity-90";
           }
-
+          
           const isCentered = idx === 2 && centerKey !== null;
-
           return (
-            <div>
             <div
               key={key}
-              onClick={() => {if (!isCentered) setCenterKey(key); }}
+              onClick={() => {if (!isCentered) setCenterKey(key);}}
               style={{ cursor: !isCentered ? "pointer" : "default" }}
             >
-                <CardComponent mouseSensitivity={mouseSens} className={positionClass} isCentered={isCentered}/>
-            </div>
+              <CardComponent mouseSensitivity={mouseSens} className={`${positionClass}`} isCentered={isCentered}/>  
             </div>
           );
         })}

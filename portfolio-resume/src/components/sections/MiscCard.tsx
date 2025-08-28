@@ -10,6 +10,10 @@ export function MiscCard({ className = "", mouseSensitivity = 0, isCentered = fa
                       dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] 
                       dark:bg-black dark:border-white/[0.2] border-black/[0.3] 
                       rounded-xl p-6 border ${className}`}>
+              <CardItem>
+                {/* TODO: remove card item and fix center positioning*/}
+                <Image src="/pics/pokecards/Resume.png" height="0" width="0" className="w-0" alt="" />
+              </CardItem>
               <motion.div 
               initial={{ opacity: 0.0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
