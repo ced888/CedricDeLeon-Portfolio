@@ -84,16 +84,16 @@ function Projects({selectedIdx,setSelectedIdx,}: {selectedIdx: number | null; se
         ? projectList.map((project: projectProps, idx) => (
             <button
               key={project.title}
-              className="bg-white dark:bg-gray-900 rounded-lg shadow p-4 flex flex-col items-center hover:ring-2 ring-blue-400 transition-all"
+              className="bg-white dark:bg-gray-900 rounded-lg shadow p-4 flex flex-col items-center hover:ring-2 ring-blue-400 transition-all cursor-pointer"
               onClick={() => setSelectedIdx(idx)}
             >
               <div 
-                className="w-full h-40 bg-gray-200 dark:bg-gray-800 rounded mb-2 flex items-center justify-center overflow-y-auto">
+                className="w-full h-40 bg-gray-200 dark:bg-gray-800 rounded mb-2 flex items-center justify-center overflow-hidden">
                 <Image
                   src={project.image}
                   alt={project.title}
-                  width={80}
-                  height={80}
+                  width={350}
+                  height={350}
                   className="object-cover rounded"
                 />
               </div>
@@ -106,20 +106,20 @@ function Projects({selectedIdx,setSelectedIdx,}: {selectedIdx: number | null; se
             </button>
           ))
         : (
-          <div key={projectList[selectedIdx].title} className="col-span-2 bg-white dark:bg-gray-900 rounded-lg shadow p-6 flex flex-col items-center animate-in fade-in">
+          <div key={projectList[selectedIdx].title} className="col-span-2 bg-white dark:bg-gray-900 rounded-lg shadow p-6 flex flex-col items-center animate-in fade-in overflow-y-auto">
             <button
-              className="self-end mb-2 px-3 py-1 text-s rounded bg-gray-200 dark:bg-gray-700"
+              className="self-end mb-2 px-3 py-1 text-s rounded bg-gray-200 dark:bg-gray-700 cursor-pointer"
               onClick={() => setSelectedIdx(null)}
             >
               ← Back
             </button>
-            <div className="w-full h-48 bg-gray-200 dark:bg-gray-800 rounded mb-4 flex items-center justify-center overflow-hidden">
+            <div className="w-full h-70 bg-gray-200 dark:bg-gray-800 rounded mb-4 flex items-center justify-center overflow-hidden">
               <Image
                 src={projectList[selectedIdx].image}
                 alt={projectList[selectedIdx].title}
-                width={120}
-                height={120}
-                className="object-cover rounded"
+                width={1000}
+                height={1000}
+                className="w-full object-cover rounded"
               />
             </div>
             <h2 className="font-bold text-lg text-gray-800 dark:text-white mb-2">
@@ -147,27 +147,33 @@ type projectProps = {
 
 const projectList : projectProps[] = [
   {
-    title: "Project One",
+    title: "Workflow Approval System",
     description: "Short description for project one.",
-    image: "/pics/project1.png",
+    image: "/projects/workflow/MatrixDesigner.png",
     details: "This is a longer description for Project One. It includes features, technologies, and links."
   },
   {
-    title: "Project Two",
+    title: "HypeShifts",
     description: "Short description for project two.",
-    image: "/pics/project2.png",
+    image: "/projects/hypeshifts/HypeShifts logo.png",
     details: "This is a longer description for Project Two. It includes features, technologies, and links."
   },
   {
-    title: "Project Three",
+    title: "Massage Therapy Booking App",
     description: "Short description for project three.",
-    image: "/pics/project3.png",
+    image: "/projects/massage/Homepage.png",
     details: "This is a longer description for Project Three. It includes features, technologies, and links."
   },
   {
-    title: "Project Four",
+    title: "ArcGIS misc",
     description: "Short description for project four.",
-    image: "/pics/project4.png",
+    image: "/projects/arcgis/Alberta Reintroduction species.png",
+    details: "This is a longer description for Project Four. It includes features, technologies, and links."
+  },
+  {
+    title: "Data Visualizations",
+    description: "Short description for project four.",
+    image: "/projects/datavisualizations/AvgTempMap.png",
     details: "This is a longer description for Project Four. It includes features, technologies, and links."
   },
 ];
