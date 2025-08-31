@@ -2,15 +2,15 @@ import Image from "next/image";
 import { CardBody, CardContainer, CardItem } from "../ui/3d-card";
 import { BackgroundGradient } from "../ui/background-gradient";
 
-export function ProfileCard({ 
-  className = "", 
-  mouseSensitivity = 0, 
-  isCentered = false 
-  }: { 
-    className?: string, 
-    mouseSensitivity?: number, 
-    isCentered?: boolean 
-  }) {
+export function ProfileCard({
+  className = "",
+  mouseSensitivity = 0,
+  isCentered = false
+}: {
+  className?: string,
+  mouseSensitivity?: number,
+  isCentered?: boolean
+}) {
 
   return (
     <CardContainer className="" mouseSensitivity={mouseSensitivity}>

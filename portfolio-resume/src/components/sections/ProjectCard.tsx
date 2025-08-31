@@ -77,34 +77,34 @@ export function ProjectCard({
   );
 }
 
-function Projects({selectedIdx,setSelectedIdx,}: {selectedIdx: number | null; setSelectedIdx: React.Dispatch<React.SetStateAction<number | null>>;}) {
+function Projects({ selectedIdx, setSelectedIdx, }: { selectedIdx: number | null; setSelectedIdx: React.Dispatch<React.SetStateAction<number | null>>; }) {
   return (
     <div className={`grid ${selectedIdx === null ? "grid-cols-1 md:grid-cols-2" : ""} gap-4 mt-6`}>
       {selectedIdx === null
         ? projectList.map((project: projectProps, idx) => (
-            <button
-              key={project.title}
-              className="bg-white dark:bg-gray-900 rounded-lg shadow p-4 flex flex-col items-center hover:ring-2 ring-blue-400 transition-all cursor-pointer"
-              onClick={() => setSelectedIdx(idx)}
-            >
-              <div 
-                className="w-full h-40 bg-gray-200 dark:bg-gray-800 rounded mb-2 flex items-center justify-center overflow-hidden">
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  width={350}
-                  height={350}
-                  className="object-cover rounded"
-                />
-              </div>
-              <h3 className="font-semibold text-base text-gray-800 dark:text-white mb-1">
-                {project.title}
-              </h3>
-              <p className="text-xs text-gray-500 dark:text-gray-300 text-center">
-                {project.description}
-              </p>
-            </button>
-          ))
+          <button
+            key={project.title}
+            className="bg-white dark:bg-gray-900 rounded-lg shadow p-4 flex flex-col items-center hover:ring-2 ring-blue-400 transition-all cursor-pointer"
+            onClick={() => setSelectedIdx(idx)}
+          >
+            <div
+              className="w-full h-40 bg-gray-200 dark:bg-gray-800 rounded mb-2 flex items-center justify-center overflow-hidden">
+              <Image
+                src={project.image}
+                alt={project.title}
+                width={350}
+                height={350}
+                className="object-cover rounded"
+              />
+            </div>
+            <h3 className="font-semibold text-base text-gray-800 dark:text-white mb-1">
+              {project.title}
+            </h3>
+            <p className="text-xs text-gray-500 dark:text-gray-300 text-center">
+              {project.description}
+            </p>
+          </button>
+        ))
         : (
           <div key={projectList[selectedIdx].title} className="col-span-2 bg-white dark:bg-gray-900 rounded-lg shadow p-6 flex flex-col items-center animate-in fade-in overflow-y-auto">
             <button
@@ -145,7 +145,7 @@ type projectProps = {
   details: string;
 }
 
-const projectList : projectProps[] = [
+const projectList: projectProps[] = [
   {
     title: "Workflow Approval System",
     description: "Short description for project one.",

@@ -49,6 +49,7 @@ export function ResumeCard({ className = "", mouseSensitivity = 0, isCentered = 
             </CardItem>
 
             <ProgrammingLanguages />
+            
           </motion.div>
         </CardBody>
       </CardContainer>

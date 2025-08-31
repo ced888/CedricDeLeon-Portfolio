@@ -1,7 +1,7 @@
 "use client"
 import Image from "next/image";
 
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { CardBody, CardContainer, CardItem } from "../components/ui/3d-card";
 import { WavyBackground } from "@/components/ui/wavy-background";
 import { motion } from "motion/react";
@@ -39,7 +39,7 @@ export default function Home() {
   const orderedCards = getCarouselIndices().map(idx => cardList[idx]);
 
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0.0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{
@@ -61,12 +61,12 @@ export default function Home() {
           else if (idx === 1) {
             positionClass += "w-auto w-[15vw] h-[22vw] -rotate-4 z-0 mt-[12vh]";
             mouseSens = 15;
-          } 
+          }
           //Right card is also slightly rotated and smaller
           else if (idx === 3) {
             positionClass += "w-auto w-[15vw] h-[22vw] rotate-4 z-0 mt-[12vh]";
             mouseSens = 15;
-          } 
+          }
           // Other cards are smaller and less prominent
           else if (idx === 4) {
             positionClass += "w-auto w-[12vw] h-[20vw] rotate-8 opacity-90 mt-[18vh]";
@@ -79,15 +79,15 @@ export default function Home() {
           else {
             positionClass += "w-auto w-[12vw] h-[20vw] opacity-90";
           }
-          
+
           const isCentered = idx === 2 && centerKey !== null;
           return (
             <div
               key={key}
-              onClick={() => {if (!isCentered) setCenterKey(key);}}
+              onClick={() => { if (!isCentered) setCenterKey(key); }}
               style={{ cursor: !isCentered ? "pointer" : "default" }}
             >
-              <CardComponent mouseSensitivity={mouseSens} className={`${positionClass}`} isCentered={isCentered}/>  
+              <CardComponent mouseSensitivity={mouseSens} className={`${positionClass}`} isCentered={isCentered} />
             </div>
           );
         })}
