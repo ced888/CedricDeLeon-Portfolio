@@ -26,17 +26,16 @@ export function ResumeCard({ className = "", mouseSensitivity = 0, isCentered = 
             }}
           >
             <CardItem
-              translateZ="0"
-              className="text-xl font-bold text-neutral-800 dark:text-white"
+              className="text-xl font-bold text-neutral-700 dark:text-white"
             >
               Resume & Experiences
               <CardItem
-                translateZ="0"
-                className="text-neutral-700 text-sm max-w-sm mt-2 dark:text-neutral-300"
+              className="font-semibold text-neutral-600 text-lg mt-2 dark:text-neutral-300"
               >
                 Here are the list of my professional experiences!
               </CardItem>
             </CardItem>
+            
 
             <Positions />
 
@@ -88,12 +87,12 @@ function Positions() {
             {index + 1}
           </span>
           <div className="flex-1">
-            <p className="text-m text-blue-900 rounded-lg font-semibold mb-0.5">
-              <a href={position.url} target="_blank">
+            <p className="text-m  text-blue-900 rounded-lg font-semibold mb-0.5">
+              <a href={position.url} target="_blank" className="hover:underline sm:group-hover:bg-blue-100 rounded-lg p-1" rel="noreferrer">
                 {position.companyName}
               </a>
             </p>
-            <p className="font-bold text-md mb-0.5">{position.positionTitle}</p>
+            <p className="font-semibold text-base text-gray-800 dark:text-white mb-1 text-md mb-0.5">{position.positionTitle}</p>
             <p className="text-sm">{position.date}</p>
           </div>
         </div>

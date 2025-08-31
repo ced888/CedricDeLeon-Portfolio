@@ -4,13 +4,17 @@ import { BackgroundGradient } from "../ui/background-gradient";
 
 export function ProfileCard({
   className = "",
-  mouseSensitivity = 0,
+  mouseSensitivity = 100,
   isCentered = false
 }: {
   className?: string,
   mouseSensitivity?: number,
   isCentered?: boolean
 }) {
+
+  if (isCentered) {
+    mouseSensitivity = 50;
+  }
 
   return (
     <CardContainer className="" mouseSensitivity={mouseSensitivity}>

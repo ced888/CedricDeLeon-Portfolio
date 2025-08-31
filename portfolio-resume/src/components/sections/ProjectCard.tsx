@@ -38,17 +38,16 @@ export function ProjectCard({
             }}
           >
             <CardItem
-              as="p"
-              translateZ="50"
-              className="text-xl font-bold text-neutral-600 dark:text-white"
+              translateZ="60"
+              className="text-xl font-bold text-neutral-700 dark:text-white"
             >
               Projects
-            </CardItem>
-            <CardItem
-              translateZ="60"
-              className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
-            >
-              Click a project to see more details.
+              <CardItem
+              translateZ="0"
+              className="font-semibold text-neutral-600 text-lg mt-2 dark:text-neutral-300"
+              >
+                Click on a project to see more details!
+              </CardItem>
             </CardItem>
             {/* Bento grid skeleton */}
             <Projects selectedIdx={selectedIdx} setSelectedIdx={setSelectedIdx} />
@@ -149,26 +148,32 @@ const projectList: projectProps[] = [
   },
   {
     title: "HypeShifts",
-    description: "an android shift scheduling app for small businesses.",
+    description: "An android shift scheduling app for small businesses.",
     image: "/projects/hypeshifts/HypeShifts logo.png",
     technologies: ["Java", "JUNIT", "Android Studio", "MongoDB"]
   },
   {
     title: "Massage Therapy Booking App",
-    description: "Short description for project three.",
+    description: "An app to book massage therapy appointments.",
     image: "/projects/massage/Homepage.png",
-    technologies: []
+    technologies: ["React", "MUI", "TypeScript", "Node.js", "Azure", "MSSQL"]
   },
   {
     title: "Data Visualizations",
-    description: "Short description for project four.",
+    description: "Some data visualizations I created.",
     image: "/projects/datavisualizations/AvgTempMap.png",
-    technologies: []
+    technologies: ["Tableau", "MS Excel"]
   },
   {
     title: "ArcGIS misc",
-    description: "Short description for project four.",
-    image: "/projects/arcgis/Alberta Reintroduction species.png",
-    technologies: []
+    description: "Some ArcGIS projects I worked on.",
+    image: "/projects/arcgis/EdmontonRasterZoom.jpg",
+    technologies: ["ArcGIS Pro"]
+  },
+  {
+    title: "This Website!!!",
+    description: "Pokemon themed portfolio and resume website.",
+    image: "/pics/pokecards/CedricDeLeon.png",
+    technologies: ["Next.js", "TypeScript", "Aceternity UI", "TailwindCSS", "Framer Motion"]
   }  
 ];
