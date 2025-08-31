@@ -2,6 +2,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { CardBody, CardContainer, CardItem } from "../ui/3d-card";
 import { motion } from "motion/react";
+import { ProjectPages } from "./ProjectLayouts/ProjectPages";
 
 
 export function ProjectCard({
@@ -100,9 +101,18 @@ function Projects({ selectedIdx, setSelectedIdx, }: { selectedIdx: number | null
             <h3 className="font-semibold text-base text-gray-800 dark:text-white mb-1">
               {project.title}
             </h3>
-            <p className="text-xs text-gray-500 dark:text-gray-300 text-center">
+            <p className="text-s text-gray-700 dark:text-gray-300 text-left ml-2">
               {project.description}
             </p>
+            <div className="flex flex-cols flex-wrap gap-1">
+              {
+                project.technologies.map((tech) => (
+                    <div key={tech} className="text-xs bg-green-800 p-2 rounded-lg text-gray-100 dark:text-gray-600 mt-1">
+                      {tech}
+                    </div>
+                ))
+              }
+            </div>
           </button>
         ))
         : (
@@ -113,24 +123,9 @@ function Projects({ selectedIdx, setSelectedIdx, }: { selectedIdx: number | null
             >
               ← Back
             </button>
-            <div className="w-full h-70 bg-gray-200 dark:bg-gray-800 rounded mb-4 flex items-center justify-center overflow-hidden">
-              <Image
-                src={projectList[selectedIdx].image}
-                alt={projectList[selectedIdx].title}
-                width={1000}
-                height={1000}
-                className="w-full object-cover rounded"
-              />
-            </div>
-            <h2 className="font-bold text-lg text-gray-800 dark:text-white mb-2">
-              {projectList[selectedIdx].title}
-            </h2>
-            <p className="text-sm text-gray-500 dark:text-gray-300 mb-4 text-center">
-              {projectList[selectedIdx].description}
-            </p>
-            <div className="text-base text-gray-700 dark:text-gray-200 text-center">
-              {projectList[selectedIdx].details}
-            </div>
+            <h1 className="text-2xl font-semibold text-gray-800 dark:text-gray-300 mb-4">{projectList[selectedIdx].title}</h1>
+            <ProjectPages ProjectName= {`${projectList[selectedIdx].title}`}/>
+            
           </div>
         )
       }
@@ -142,38 +137,38 @@ type projectProps = {
   title: string;
   description: string;
   image: string;
-  details: string;
+  technologies: string[];
 }
 
 const projectList: projectProps[] = [
   {
     title: "Workflow Approval System",
-    description: "Short description for project one.",
+    description: "Web application to create and organize workflows.",
     image: "/projects/workflow/MatrixDesigner.png",
-    details: "This is a longer description for Project One. It includes features, technologies, and links."
+    technologies: ["C#","TypeScript", "SQL", "Azure", "Angular", ".Net Framework" ]
   },
   {
     title: "HypeShifts",
-    description: "Short description for project two.",
+    description: "an android shift scheduling app for small businesses.",
     image: "/projects/hypeshifts/HypeShifts logo.png",
-    details: "This is a longer description for Project Two. It includes features, technologies, and links."
+    technologies: ["Java", "JUNIT", "Android Studio", "MongoDB"]
   },
   {
     title: "Massage Therapy Booking App",
     description: "Short description for project three.",
     image: "/projects/massage/Homepage.png",
-    details: "This is a longer description for Project Three. It includes features, technologies, and links."
-  },
-  {
-    title: "ArcGIS misc",
-    description: "Short description for project four.",
-    image: "/projects/arcgis/Alberta Reintroduction species.png",
-    details: "This is a longer description for Project Four. It includes features, technologies, and links."
+    technologies: []
   },
   {
     title: "Data Visualizations",
     description: "Short description for project four.",
     image: "/projects/datavisualizations/AvgTempMap.png",
-    details: "This is a longer description for Project Four. It includes features, technologies, and links."
+    technologies: []
   },
+  {
+    title: "ArcGIS misc",
+    description: "Short description for project four.",
+    image: "/projects/arcgis/Alberta Reintroduction species.png",
+    technologies: []
+  }  
 ];
