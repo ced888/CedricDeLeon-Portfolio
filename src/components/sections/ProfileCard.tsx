@@ -2,13 +2,6 @@ import Image from "next/image";
 import { CardBody, CardContainer, CardItem } from "../ui/3d-card";
 import { BackgroundGradient } from "../ui/background-gradient";
 
-const shimmerStyle = {
-  webckitMaskImage: 'linear-gradient(45deg,#000 25%,rgba(0,0,0,.2) 50%,#000 75%)',
-  maskImage: 'linear-gradient(45deg,#000 25%,rgba(0,0,0,.2) 50%,#000 75%)',
-  webkitMaskSize: '800%',
-  maskSize: '800%',
-}
-
 export function ProfileCard({
   className = "",
   mouseSensitivity = 100,

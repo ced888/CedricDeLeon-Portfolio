@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { CardBody, CardContainer, CardItem } from "../ui/3d-card";
 import { motion } from "motion/react";
-import { ReactNode } from "react";
 
 export function BlogCard({ className = "", mouseSensitivity = 0, isCentered = false }: { className?: string, mouseSensitivity?: number, isCentered?: boolean }) {
   if (isCentered) {
@@ -11,7 +10,8 @@ export function BlogCard({ className = "", mouseSensitivity = 0, isCentered = fa
         <CardBody className={`bg-gray-50 relative group/card 
                        dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] 
                        dark:bg-black dark:border-white/[0.2] border-black/[0.3] 
-                       rounded-xl p-6 border grid grid-cols-2 overflow-y-auto ${className}`}>
+                       rounded-xl p-6 border grid grid-cols-2 ${className}`}> 
+                       {/* overflow-y-auto <- remember to add this back when adding content */}
           <CardItem
             translateZ="80"
             className="h-1/2 w-auto flex justify-end"
@@ -49,7 +49,7 @@ export function BlogCard({ className = "", mouseSensitivity = 0, isCentered = fa
           title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
           referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
           <CardItem className="font-semibold text-neutral-600 text-lg mt-2 ml-8 dark:text-neutral-300">
-            Isn't he so jazzy?
+            Isn&apos;t he so jazzy?
           </CardItem>
           
           </motion.div>

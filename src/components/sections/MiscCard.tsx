@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { CardBody, CardContainer, CardItem } from "../ui/3d-card";
 import { motion } from "motion/react";
-import { X } from "lucide-react";
 import { useState, useEffect } from 'react';
 
 
@@ -26,7 +25,6 @@ function DisplayTime() {
   );
 }
 export function MiscCard({ className = "", mouseSensitivity = 0, isCentered = false }: { className?: string, mouseSensitivity?: number, isCentered?: boolean }) {
-  var today = new Date();
   if (isCentered) {
     return (
       <CardContainer className="" mouseSensitivity={mouseSensitivity}>
@@ -53,16 +51,17 @@ export function MiscCard({ className = "", mouseSensitivity = 0, isCentered = fa
               <CardItem
               className="font-semibold text-neutral-600 text-lg mt-2 dark:text-neutral-300"
               >
-                Here's my odd music taste if you're interested.
+                Here&apos;s my odd music taste if you&apos;re interested.
               </CardItem>
             </CardItem>
             <CardItem
               className="jusify-center items-center mt-4"
             >
               <iframe data-testid="embed-iframe" className="w-[25vw] h-[25vw] rounded-lg border-2 shadow-lg"
-              src="https://open.spotify.com/embed/playlist/37i9dQZEVXbMda2apknTqH?utm_source=generator&theme=0" 
+              src="https://open.spotify.com/embed/playlist/30UqV2QvL5CrwRhw3iMJUI?utm_source=generator" 
               width="200%" height="600" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
               loading="lazy"></iframe>
+              
             </CardItem>
             <div className="flex flex-cols-2 mt-4">
             <CardItem className="bg-white dark:bg-gray-900 rounded-lg shadow-xl border-3 p-4 flex">

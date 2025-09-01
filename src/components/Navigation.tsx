@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import NavButton from "./NavButton";
-import { FaCode } from "react-icons/fa6";
 import { ReactNode } from "react";
 import { PiLineVerticalThin } from "react-icons/pi";
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -35,7 +34,7 @@ export default function Navigation(): ReactNode {
               onClick={handleMobile}
             />
           )}
-
+          
           <a href="/" className="flex gap-2 text-4xl font-bold items-center">
             <IoSearch className="text-blue-500 w-[70px]" />
             <TypewriterEffect

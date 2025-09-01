@@ -1,16 +1,12 @@
 "use client"
-import Image from "next/image";
 
-import React, { useState } from "react";
-import { CardBody, CardContainer, CardItem } from "../components/ui/3d-card";
+import { useState } from "react";
 import { motion } from "motion/react";
-import { BentoGrid } from "@/components/ui/bento-grid";
 import { ProfileCard } from "@/components/sections/ProfileCard";
 import { ProjectCard } from "@/components/sections/ProjectCard";
 import { ResumeCard } from "@/components/sections/ResumeCard";
 import { MiscCard } from "@/components/sections/MiscCard";
 import { BlogCard } from "@/components/sections/BlogCard";
-import { Spotlight } from "@/components/ui/spotlight-new";
 
 const cardList = [
   { key: "blog", component: BlogCard },

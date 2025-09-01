@@ -1,7 +1,6 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import Image from "next/image";
 import React, {
   createContext,
   useState,
@@ -33,7 +32,7 @@ export const CardContainer = ({
     const { left, top, width, height } =
       containerRef.current.getBoundingClientRect();
 
-    let ms = parseInt(`${mouseSensitivity}`);
+    const ms = parseInt(`${mouseSensitivity}`);
     const x = (e.clientX - left - width / 2) / ms;
     const y = (e.clientY - top - height / 2) / ms;
     containerRef.current.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;

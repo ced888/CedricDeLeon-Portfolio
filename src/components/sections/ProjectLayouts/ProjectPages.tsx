@@ -18,7 +18,7 @@ export function ProjectPages({ ProjectName = ""}: { ProjectName?: string;})  {
         case "ArcGIS misc":
             return <ArcGIS />;
         case "This Website!!!":
-            return (<div>Well, you're looking at it yourself... Have a gander :D</div>);
+            return (<div>Well, you&apos;re looking at it yourself... Have a gander :D</div>);
         default:
             return(<div>Sorry, this page is still in construction!</div>)
     }
@@ -29,7 +29,7 @@ function Workflow() {
         <div className="w-full h-full flex flex-col items-center justify-center text-center">
             <p className="text-lg text-gray-700 dark:text-gray-300">
                 This is an application that allows users to create, manage, and approve workflows within an organization. 
-                It provides a user-friendly interface called "Matrix Designer" for defining workflow steps, assigning tasks, and tracking progress.
+                It provides a user-friendly interface called &quot;Matrix Designer&quot; for defining workflow steps, assigning tasks, and tracking progress.
             </p>
             <Image
                 src="/projects/workflow/Workflow Matrix Designer.gif" unoptimized
@@ -106,7 +106,7 @@ function HypeShifts() {
             <p className="text-m text-gray-700 dark:text-gray-300 mt-4"> figure 2. HypeShifts ERD</p>
             <p className="text-lg text-gray-700 dark:text-gray-300 mt-4">
                 I was responsible of the early design stages and so I created the ERD.
-                represents the underlying data model that supports the application's core functionality:
+                represents the underlying data model that supports the application&apos;s core functionality:
                 managing employee schedules, shift assignments, and user roles for small businesses.
             </p>
 
@@ -203,7 +203,7 @@ function DataVisualizations() {
                 <IoLogoTableau />
             </Link>
             <p className="text-lg text-gray-700 dark:text-gray-300">
-                Here's some of my work to showcase my skills in data visualization using Tableau and Microsoft Excel!
+                Here&apos;s some of my work to showcase my skills in data visualization using Tableau and Microsoft Excel!
             </p>
             <Image
                 src="/projects/datavisualizations/AvgTempMap.png"
@@ -238,7 +238,7 @@ function ArcGIS() {
         <div className="w-full h-full flex flex-col items-center justify-center text-center">
 
             <p className="text-lg text-gray-700 dark:text-gray-300">
-                Here's some of my work to showcase my skills in data visualization using ArcGIS!
+                Here&apos;s some of my work to showcase my skills in data visualization using ArcGIS!
             </p>
             <Image
                 src="/projects/arcgis/EdmontonRaster.jpg"
