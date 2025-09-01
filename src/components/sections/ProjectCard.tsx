@@ -49,7 +49,7 @@ export function ProjectCard({
             </CardItem>
             </CardItem>
             {/* Bento grid skeleton */}
-            <div className="h-[33vw] overflow-y-auto">
+            <div className="h-[32vw] overflow-y-auto">
             <Projects selectedIdx={selectedIdx} setSelectedIdx={setSelectedIdx} />
             </div>
           </motion.div>
@@ -89,7 +89,7 @@ function Projects({ selectedIdx, setSelectedIdx, }: { selectedIdx: number | null
             onClick={() => setSelectedIdx(idx)}
           >
             <div
-              className="w-full h-40 bg-gray-200 dark:bg-gray-800 rounded mb-2 flex items-center justify-center overflow-hidden">
+              className="w-full h-22 bg-gray-200 dark:bg-gray-800 rounded mb-2 flex items-center justify-center overflow-hidden">
               <Image
                 src={project.image}
                 alt={project.title}
@@ -98,16 +98,16 @@ function Projects({ selectedIdx, setSelectedIdx, }: { selectedIdx: number | null
                 className="object-cover rounded"
               />
             </div>
-            <h3 className="font-semibold text-base text-gray-800 dark:text-white mb-1">
+            <h3 className="font-semibold text-sm text-gray-800 dark:text-white mb-1">
               {project.title}
             </h3>
-            <p className="text-s text-gray-700 dark:text-gray-300 text-left ml-2">
+            <p className="text-sm text-gray-700 dark:text-gray-300 text-left ml-2">
               {project.description}
             </p>
             <div className="flex flex-cols flex-wrap gap-1">
               {
                 project.technologies.map((tech) => (
-                    <div key={tech} className="text-xs bg-green-800 p-2 rounded-lg text-gray-100 dark:text-gray-600 mt-1">
+                    <div key={tech} className="text-xs bg-green-800 p-1.5 rounded-lg text-gray-100 dark:text-gray-600 mt-1">
                       {tech}
                     </div>
                 ))
@@ -118,12 +118,12 @@ function Projects({ selectedIdx, setSelectedIdx, }: { selectedIdx: number | null
         : (
           <div key={projectList[selectedIdx].title} className="col-span-2 bg-white dark:bg-gray-900 rounded-lg shadow p-6 flex flex-col items-center animate-in fade-in overflow-y-auto">
             <button
-              className="self-end mb-2 px-3 py-1 text-m rounded bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 cursor-pointer"
+              className="self-end mb-2 px-3 py-1 text-sm rounded bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 cursor-pointer"
               onClick={() => setSelectedIdx(null)}
             >
               ← Back
             </button>
-            <h1 className="text-2xl font-semibold text-gray-800 dark:text-gray-300 mb-4">{projectList[selectedIdx].title}</h1>
+            <h1 className="text-xl font-semibold text-gray-800 dark:text-gray-300 mb-4">{projectList[selectedIdx].title}</h1>
             <ProjectPages ProjectName= {`${projectList[selectedIdx].title}`}/>
             
           </div>

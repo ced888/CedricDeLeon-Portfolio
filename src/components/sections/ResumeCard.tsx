@@ -76,7 +76,7 @@ export function ResumeCard({ className = "", mouseSensitivity = 0, isCentered = 
 
 function Positions() {
   return (
-    <div className="col-span-full mt-4 px-4 pb-4 md:overflow-y-auto sm:h-[400px] shadow-lg rounded-lg">
+    <div className="col-span-full mt-4 px-4 pb-4 md:overflow-y-auto sm:h-[18vw] shadow-lg rounded-lg">
       {experienceLists.map((position: experienceListsProps, index) => (
         <div
           className="flex items-center gap-4 p-2.5 sm:hover:bg-[#A8DCAB] rounded-lg transition-colors group"
@@ -86,13 +86,13 @@ function Positions() {
             {index + 1}
           </span>
           <div className="flex-1">
-            <p className="text-m  text-blue-900 rounded-lg font-semibold mb-0.5">
+            <p className="text-sm  text-blue-900 rounded-lg font-semibold mb-0.5">
               <a href={position.url} target="_blank" className="hover:underline sm:group-hover:bg-blue-100 rounded-lg p-1" rel="noreferrer">
                 {position.companyName}
               </a>
             </p>
-            <p className="font-semibold text-base text-gray-800 dark:text-white mb-1 text-md mb-0.5">{position.positionTitle}</p>
-            <p className="text-sm">{position.date}</p>
+            <p className="font-semibold text-sm text-gray-800 dark:text-white mb-1 text-smd mb-0.5">{position.positionTitle}</p>
+            <p className="text-xs">{position.date}</p>
           </div>
         </div>
       ))}
@@ -172,8 +172,8 @@ const languageItems: {
       component: (
         <Image
           src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg"
-          width={40}
-          height={40}
+          width={30}
+          height={30}
           alt="C#"
         />
       ),
@@ -182,8 +182,8 @@ const languageItems: {
       component: (
         <Image
           src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
-          width={40}
-          height={40}
+          width={30}
+          height={30}
           alt="HTML"
         />
       ),
@@ -193,8 +193,8 @@ const languageItems: {
       component: (
         <Image
           src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
-          width={40}
-          height={40}
+          width={30}
+          height={30}
           alt="CSS"
         />
       ),
@@ -204,8 +204,8 @@ const languageItems: {
       component: (
         <Image
           src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
-          width={40}
-          height={40}
+          width={30}
+          height={30}
           alt="JavaScript"
         />
       ),
@@ -215,8 +215,8 @@ const languageItems: {
       component: (
         <Image
           src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
-          width={40}
-          height={40}
+          width={30}
+          height={30}
           alt="TypeScript"
         />
       ),
@@ -226,8 +226,8 @@ const languageItems: {
       component: (
         <Image
           src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg"
-          width={40}
-          height={40}
+          width={30}
+          height={30}
           alt="C"
         />
       ),
@@ -238,8 +238,8 @@ const languageItems: {
       component: (
         <Image
           src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
-          width={40}
-          height={40}
+          width={30}
+          height={30}
           alt="Java"
         />
       ),
@@ -249,8 +249,8 @@ const languageItems: {
       component: (
         <Image
           src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
-          width={40}
-          height={40}
+          width={30}
+          height={30}
           alt="Python"
         />
       ),
@@ -260,8 +260,8 @@ const languageItems: {
       component: (
         <Image
           src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg"
-          width={40}
-          height={40}
+          width={30}
+          height={30}
           alt="SQL"
         />
       ),
@@ -271,8 +271,8 @@ const languageItems: {
       component: (
         <Image
           src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg"
-          width={40}
-          height={40}
+          width={30}
+          height={30}
           alt="Azure"
         />
       ),

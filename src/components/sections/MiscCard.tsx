@@ -18,7 +18,7 @@ function DisplayTime() {
   }, []);
     return (
     <div className="flex flex-col gap-2">
-      <span className="text-7xl text-gray-600 dark:text-gray-400">
+      <span className="text-4xl text-gray-600 dark:text-gray-400">
         {time.toLocaleTimeString()}
       </span>
     </div>
@@ -57,7 +57,7 @@ export function MiscCard({ className = "", mouseSensitivity = 0, isCentered = fa
             <CardItem
               className="jusify-center items-center mt-4"
             >
-              <iframe data-testid="embed-iframe" className="w-[25vw] h-[25vw] rounded-lg border-2 shadow-lg"
+              <iframe data-testid="embed-iframe" className="w-[25vw] h-[23vw] rounded-lg border-2 shadow-lg"
               src="https://open.spotify.com/embed/playlist/30UqV2QvL5CrwRhw3iMJUI?utm_source=generator" 
               width="200%" height="600" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
               loading="lazy"></iframe>
@@ -66,7 +66,7 @@ export function MiscCard({ className = "", mouseSensitivity = 0, isCentered = fa
             <div className="flex flex-cols-2 mt-4">
             <CardItem className="bg-white dark:bg-gray-900 rounded-lg shadow-xl border-3 p-4 flex">
               <div className="flex flex-col">
-                <span className="text-4xl font-bold text-gray-700 dark:text-white">Local Time:</span>
+                <span className="text-2xl font-bold text-gray-700 dark:text-white">Local Time:</span>
                 <DisplayTime />
               </div>
             </CardItem>
