@@ -1,15 +1,39 @@
 import Image from "next/image";
 import { CardBody, CardContainer, CardItem } from "../ui/3d-card";
 import { motion } from "motion/react";
+import { X } from "lucide-react";
+import { useState, useEffect } from 'react';
 
+
+// Replace the existing DisplayTime component with this:
+function DisplayTime() {
+  const [time, setTime] = useState(new Date());
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTime(new Date());
+    }, 1000);
+
+    // Cleanup on unmount
+    return () => clearInterval(timer);
+  }, []);
+    return (
+    <div className="flex flex-col gap-2">
+      <span className="text-7xl text-gray-600 dark:text-gray-400">
+        {time.toLocaleTimeString()}
+      </span>
+    </div>
+  );
+}
 export function MiscCard({ className = "", mouseSensitivity = 0, isCentered = false }: { className?: string, mouseSensitivity?: number, isCentered?: boolean }) {
+  var today = new Date();
   if (isCentered) {
     return (
       <CardContainer className="" mouseSensitivity={mouseSensitivity}>
         <CardBody className={`bg-gray-50 relative group/card 
                       dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] 
                       dark:bg-black dark:border-white/[0.2] border-black/[0.3] 
-                      rounded-xl p-6 border ${className}`}>
+                      rounded-xl p-6 border overflow-y-auto ${className}`}>
           <CardItem>
             {/* TODO: remove card item and fix center positioning*/}
             <Image src="/pics/pokecards/Resume.png" height="0" width="0" className="w-0" alt="" />
@@ -23,24 +47,37 @@ export function MiscCard({ className = "", mouseSensitivity = 0, isCentered = fa
               ease: "easeInOut",
             }}>
             <CardItem
-              as="p"
-              translateZ="50"
-              className="text-xl font-bold text-neutral-600 dark:text-white"
+              className="text-xl font-bold text-neutral-700 dark:text-white"
             >
-              Projects
+              My Playlist 🎶
+              <CardItem
+              className="font-semibold text-neutral-600 text-lg mt-2 dark:text-neutral-300"
+              >
+                Here's my odd music taste if you're interested.
+              </CardItem>
             </CardItem>
             <CardItem
-              translateZ="60"
-              className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
+              className="jusify-center items-center mt-4"
             >
-              Hover over this card to unleash the power of CSS perspective
+              <iframe data-testid="embed-iframe" className="w-[25vw] h-[25vw] rounded-lg border-2 shadow-lg"
+              src="https://open.spotify.com/embed/playlist/37i9dQZEVXbMda2apknTqH?utm_source=generator&theme=0" 
+              width="200%" height="600" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+              loading="lazy"></iframe>
             </CardItem>
-            <CardItem
-              translateZ="50"
-              className="w-60 mt-4"
-            >
-              Hello Test description
+            <div className="flex flex-cols-2 mt-4">
+            <CardItem className="bg-white dark:bg-gray-900 rounded-lg shadow-xl border-3 p-4 flex">
+              <div className="flex flex-col">
+                <span className="text-4xl font-bold text-gray-700 dark:text-white">Local Time:</span>
+                <DisplayTime />
+              </div>
             </CardItem>
+            {/* <CardItem className="bg-white dark:bg-gray-900 rounded-lg shadow p-4 flex">
+              <div className="flex flex-col">
+                <span className="text-4xl font-bold text-gray-900 dark:text-white">Your time:</span>
+                <span className="text-sm text-gray-600 dark:text-gray-400">A collection of my favorite tunes</span>
+              </div>
+            </CardItem> */}
+            </div>
           </motion.div>
         </CardBody>
       </CardContainer>

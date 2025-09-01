@@ -10,6 +10,7 @@ import { FaTimes } from "react-icons/fa";
 import SocialLinks from "./SocialLinks";
 import MobileNav from "./MobileNav";
 import { TypewriterEffect } from "./ui/typewriter-effect";
+import { IoSearch } from "react-icons/io5";
 
 export default function Navigation(): ReactNode {
   const [mobile, setMobile] = useState<boolean>(false);
@@ -21,7 +22,7 @@ export default function Navigation(): ReactNode {
   return (
     <nav>
       <div
-        className={`flex flex-col bg-spotify-light-dark max-md:mx-2 max-md:mt-2 mx-32 mt-4 p-2 rounded-full max-md:rounded-xl
+        className={`flex flex-col bg-gray-300 max-md:mx-2 max-md:mt-2 mx-32 mt-4 p-2 rounded-full max-md:rounded-xl
          `}
       >
         <section className="flex flex-row w-full justify-between items-center max-md:px-4 max-md:py-1">
@@ -35,22 +36,22 @@ export default function Navigation(): ReactNode {
             />
           )}
 
-          <a href="/" className="flex gap-2 text-3xl font-bold items-center">
-            <FaCode className="text-spotify-green w-[70px]" />
+          <a href="/" className="flex gap-2 text-4xl font-bold items-center">
+            <IoSearch className="text-blue-500 w-[70px]" />
             <TypewriterEffect
               words={[
-                { text: "Cedric", className: "text-3xl" },
-                { text: "De", className: "text-3xl" },
-                { text: "Leon", className: "text-3xl" }
+                { text: "Cedric", className: "text-4xl font-semibold" },
+                { text: "De", className: "text-4xl font-semibold" },
+                { text: "Leon", className: "text-4xl font-semibold" }
               ]}
-              className="place-self-center max-lg:hidden text-white"
+              className="place-self-center max-lg:hidden mb-1"
             />
           </a>
 
           {/*Hidden on Mobile*/}
           <section className="flex flex-row gap-5 items-center max-sm:hidden">
             <SocialLinks />
-            <PiLineVerticalThin className="text-spotify-gray text-3xl" />
+            <PiLineVerticalThin className="text-gray-700 text-3xl" />
             <NavButton name="Resume" />
           </section>
         </section>

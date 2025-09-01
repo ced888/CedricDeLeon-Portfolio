@@ -32,7 +32,7 @@ function Workflow() {
                 It provides a user-friendly interface called "Matrix Designer" for defining workflow steps, assigning tasks, and tracking progress.
             </p>
             <Image
-                src="/projects/workflow/Workflow Matrix Designer.gif"
+                src="/projects/workflow/Workflow Matrix Designer.gif" unoptimized
                 height="3000"
                 width={3000}
                 alt="Matrix Designer gif"
@@ -78,8 +78,8 @@ function HypeShifts() {
             manage, and communicate employee work schedules.
             </p>
             <Image
-                src="/projects/hypeshifts/HypeShifts.gif"
-                height="3000"
+                src="/projects/hypeshifts/HypeShifts.gif" unoptimized
+                height="3000" 
                 width={3000}
                 alt="HypeShifts gif"
                 className="mt-4">

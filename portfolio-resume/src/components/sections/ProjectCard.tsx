@@ -5,6 +5,7 @@ import { motion } from "motion/react";
 import { ProjectPages } from "./ProjectLayouts/ProjectPages";
 
 
+
 export function ProjectCard({
   className = "",
   mouseSensitivity = 0,
@@ -37,20 +38,20 @@ export function ProjectCard({
               ease: "easeInOut",
             }}
           >
+          <CardItem
+            className="text-xl font-bold text-neutral-700 dark:text-white"
+          >
+            My Projects 🦖
             <CardItem
-              translateZ="60"
-              className="text-xl font-bold text-neutral-700 dark:text-white"
+            className="font-semibold text-neutral-600 text-lg mt-2 dark:text-neutral-300"
             >
-              Projects
-              <CardItem
-              translateZ="0"
-              className="font-semibold text-neutral-600 text-lg mt-2 dark:text-neutral-300"
-              >
-                Click on a project to see more details!
-              </CardItem>
+              Click on a project to see more details!
+            </CardItem>
             </CardItem>
             {/* Bento grid skeleton */}
+            <div className="h-[33vw] overflow-y-auto">
             <Projects selectedIdx={selectedIdx} setSelectedIdx={setSelectedIdx} />
+            </div>
           </motion.div>
         </CardBody>
       </CardContainer>
@@ -79,7 +80,7 @@ export function ProjectCard({
 
 function Projects({ selectedIdx, setSelectedIdx, }: { selectedIdx: number | null; setSelectedIdx: React.Dispatch<React.SetStateAction<number | null>>; }) {
   return (
-    <div className={`grid ${selectedIdx === null ? "grid-cols-1 md:grid-cols-2" : ""} gap-4 mt-6`}>
+    <div className={`grid ${selectedIdx === null ? "grid-cols-1 md:grid-cols-2" : ""} gap-4 mt-4 m-2`}>
       {selectedIdx === null
         ? projectList.map((project: projectProps, idx) => (
           <button
@@ -117,7 +118,7 @@ function Projects({ selectedIdx, setSelectedIdx, }: { selectedIdx: number | null
         : (
           <div key={projectList[selectedIdx].title} className="col-span-2 bg-white dark:bg-gray-900 rounded-lg shadow p-6 flex flex-col items-center animate-in fade-in overflow-y-auto">
             <button
-              className="self-end mb-2 px-3 py-1 text-s rounded bg-gray-200 dark:bg-gray-700 cursor-pointer"
+              className="self-end mb-2 px-3 py-1 text-m rounded bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 cursor-pointer"
               onClick={() => setSelectedIdx(null)}
             >
               ← Back
@@ -172,7 +173,7 @@ const projectList: projectProps[] = [
   },
   {
     title: "This Website!!!",
-    description: "Pokemon themed portfolio and resume website.",
+    description: "Pokemon trading card game (TCG) themed portfolio and resume website.",
     image: "/pics/pokecards/CedricDeLeon.png",
     technologies: ["Next.js", "TypeScript", "Aceternity UI", "TailwindCSS", "Framer Motion"]
   }  

@@ -5,12 +5,13 @@ import { ReactNode } from "react";
 
 export function BlogCard({ className = "", mouseSensitivity = 0, isCentered = false }: { className?: string, mouseSensitivity?: number, isCentered?: boolean }) {
   if (isCentered) {
+    mouseSensitivity = 100;
     return (
       <CardContainer className="" mouseSensitivity={mouseSensitivity}>
         <CardBody className={`bg-gray-50 relative group/card 
                        dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] 
                        dark:bg-black dark:border-white/[0.2] border-black/[0.3] 
-                       rounded-xl p-6 border grid grid-cols-2 ${className}`}>
+                       rounded-xl p-6 border grid grid-cols-2 overflow-y-auto ${className}`}>
           <CardItem
             translateZ="80"
             className="h-1/2 w-auto flex justify-end"
@@ -19,7 +20,7 @@ export function BlogCard({ className = "", mouseSensitivity = 0, isCentered = fa
               src="/pics/pokecards/Blog.png"
               height="100"
               width="100"
-              className=" w-auto object-cover rounded-xl group-hover/card:shadow-xl"
+              className="w-auto object-cover rounded-xl group-hover/card:shadow-xl"
               alt="thumbnail"
             />
           </CardItem>
@@ -28,14 +29,13 @@ export function BlogCard({ className = "", mouseSensitivity = 0, isCentered = fa
             translateZ="50"
             className="order-first text-xl font-bold text-neutral-600 dark:text-white"
           >
-            Blogs
-           <CardItem
+            My Blogs 🌸
+              <CardItem
               className="font-semibold text-neutral-600 text-lg mt-2 dark:text-neutral-300"
               >
                 No content here yet! so watch a cat video instead haha
               </CardItem>
           </CardItem>
-          
           <motion.div
             initial={{ opacity: 0.0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -43,9 +43,18 @@ export function BlogCard({ className = "", mouseSensitivity = 0, isCentered = fa
               delay: 0.1,
               duration: 0.5,
               ease: "easeInOut",
-            }}>
+            }}
+            className="col-span-2">
+          <iframe className="w-full h-[15vw]" width="560" height="315" src="https://www.youtube.com/embed/J---aiyznGQ?si=ftlqxxOAIGJSuuUm" 
+          title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+          <CardItem className="font-semibold text-neutral-600 text-lg mt-2 ml-8 dark:text-neutral-300">
+            Isn't he so jazzy?
+          </CardItem>
+          
           </motion.div>
-        </CardBody>
+          
+          </CardBody>
       </CardContainer>
     );
   }

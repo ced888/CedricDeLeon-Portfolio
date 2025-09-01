@@ -10,7 +10,7 @@ export default function SocialLinks() {
       {socialMedias.map((social) => (
         <Link
           href={social.url}
-          className="text-3xl hover:text-spotify-green"
+          className="text-3xl hover:text-blue-400"
           key={social.title}
           target="_blank"
         >

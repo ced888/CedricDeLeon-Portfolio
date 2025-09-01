@@ -7,11 +7,10 @@ interface MobileNavProps {
 
 export default function MobileNav({ handleMobile }: MobileNavProps) {
   const links = [
-    // { section: "Profile", href: "#profile" },
+    { section: "Profile", href: "#profile" },
     { section: "Experience", href: "#experience" },
     { section: "Programming Languages", href: "#programming-languages" },
     { section: "Projects", href: "#project" },
-    { section: "Contributions", href: "#contribution" },
   ];
 
   return (

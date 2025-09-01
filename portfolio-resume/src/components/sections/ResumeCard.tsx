@@ -28,7 +28,7 @@ export function ResumeCard({ className = "", mouseSensitivity = 0, isCentered = 
             <CardItem
               className="text-xl font-bold text-neutral-700 dark:text-white"
             >
-              Resume & Experiences
+              Resume & Experiences 🎓
               <CardItem
               className="font-semibold text-neutral-600 text-lg mt-2 dark:text-neutral-300"
               >
@@ -41,8 +41,7 @@ export function ResumeCard({ className = "", mouseSensitivity = 0, isCentered = 
 
             <CardItem
               as="p"
-              translateZ="0"
-              className="text-xl mt-10 font-bold text-neutral-800 dark:text-white"
+              className="text-xl mt-10 font-bold text-neutral-700 dark:text-white"
             >
               Programming Languages & Tools
             </CardItem>
@@ -140,7 +139,7 @@ const experienceLists: experienceListsProps[] = [
   },
   {
     companyName: "PCL Construction",
-    positionTitle: "Software Developer Intern",
+    positionTitle: "Software Developer Co-op",
     date: "Sep 2022 - Jul 2023",
     url: "https://www.pcl.com",
   },
