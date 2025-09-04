@@ -34,15 +34,15 @@ export default function Navigation(): ReactNode {
             />
           )}
           
-          <a href="/" className="flex gap-2 text-2xl font-bold items-center">
+          <a href="/" className="flex gap-2 text-3xl font-bold items-center">
             <IoSearch className="text-blue-500 w-[70px]" />
             <TypewriterEffect
               words={[
-                { text: "Cedric", className: "text-2xl font-semibold" },
-                { text: "De", className: "text-2xl font-semibold" },
-                { text: "Leon", className: "text-2xl font-semibold" }
+                { text: "Cedric", className: "text-3xl font-semibold" },
+                { text: "De", className: "text-3xl font-semibold" },
+                { text: "Leon", className: "text-3xl font-semibold" }
               ]}
-              className="place-self-center max-lg:hidden mb-1"
+              className="place-self-center max-lg:hidden align"
             />
           </a>
 

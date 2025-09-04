@@ -43,7 +43,7 @@ export default function Home() {
         duration: 0.6,
         ease: "easeInOut",
       }}>
-      <main className="w-full mx-auto justify-center px-32 flex gap-14 overflow-hidden">
+      <main className="w-full mx-auto justify-center flex gap-12 overflow-hidden">
         {orderedCards.map(({ key, component: CardComponent }, idx) => {
           // Assign styles based on position
           let positionClass = "transition-transform ease-in-out duration-500";
