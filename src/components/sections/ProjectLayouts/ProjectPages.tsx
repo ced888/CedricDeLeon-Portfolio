@@ -4,6 +4,7 @@ import Link from "next/link";
 import { FaGithub } from "react-icons/fa6";
 import { IoLogoTableau } from "react-icons/io5";
 
+export default ProjectPages;
 export function ProjectPages({ ProjectName = ""}: { ProjectName?: string;})  {
 
     switch(ProjectName) {

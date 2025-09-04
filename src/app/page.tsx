@@ -1,12 +1,18 @@
 "use client"
 
-import { useState } from "react";
+import { useState, lazy } from "react";
 import { motion } from "motion/react";
-import { ProfileCard } from "@/components/sections/ProfileCard";
-import { ProjectCard } from "@/components/sections/ProjectCard";
-import { ResumeCard } from "@/components/sections/ResumeCard";
-import { MiscCard } from "@/components/sections/MiscCard";
-import { BlogCard } from "@/components/sections/BlogCard";
+//import { ProfileCard } from "@/components/sections/ProfileCard";
+// import { ProjectCard } from "@/components/sections/ProjectCard";
+// import { ResumeCard } from "@/components/sections/ResumeCard";
+// import { MiscCard } from "@/components/sections/MiscCard";
+// import { BlogCard } from "@/components/sections/BlogCard";
+const ProfileCard = lazy(() => import("@/components/sections/ProfileCard"));
+const ProjectCard = lazy(() => import("@/components/sections/ProjectCard"));
+const ResumeCard = lazy(() => import("@/components/sections/ResumeCard"));
+const MiscCard = lazy(() => import("@/components/sections/MiscCard"));
+const BlogCard = lazy(() => import("@/components/sections/BlogCard"));
+
 
 const cardList = [
   { key: "blog", component: BlogCard },

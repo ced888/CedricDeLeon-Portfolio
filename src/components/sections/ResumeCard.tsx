@@ -3,6 +3,7 @@ import { CardBody, CardContainer, CardItem } from "../ui/3d-card";
 import { motion } from "motion/react";
 import { ReactNode } from "react";
 
+export default ResumeCard;
 export function ResumeCard({ className = "", mouseSensitivity = 0, isCentered = false }: { className?: string, mouseSensitivity?: number, isCentered?: boolean }) {
   if (isCentered) {
     return (

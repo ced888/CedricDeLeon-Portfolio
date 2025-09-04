@@ -2,6 +2,7 @@ import Image from "next/image";
 import { CardBody, CardContainer, CardItem } from "../ui/3d-card";
 import { motion } from "motion/react";
 
+export default BlogCard;
 export function BlogCard({ className = "", mouseSensitivity = 0, isCentered = false }: { className?: string, mouseSensitivity?: number, isCentered?: boolean }) {
   if (isCentered) {
     mouseSensitivity = 100;

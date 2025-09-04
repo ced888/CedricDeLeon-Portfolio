@@ -1,10 +1,11 @@
 import Image from "next/image";
-import { useState } from "react";
+import { lazy, useState } from "react";
 import { CardBody, CardContainer, CardItem } from "../ui/3d-card";
 import { motion } from "motion/react";
-import { ProjectPages } from "./ProjectLayouts/ProjectPages";
+//import { ProjectPages } from "./ProjectLayouts/ProjectPages";
+const ProjectPages = lazy(() => import("./ProjectLayouts/ProjectPages"));
 
-
+export default ProjectCard;
 
 export function ProjectCard({
   className = "",
@@ -76,7 +77,7 @@ export function ProjectCard({
       </CardBody>
     </CardContainer>
   );
-}
+};
 
 function Projects({ selectedIdx, setSelectedIdx, }: { selectedIdx: number | null; setSelectedIdx: React.Dispatch<React.SetStateAction<number | null>>; }) {
   return (

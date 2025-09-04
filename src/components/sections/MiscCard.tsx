@@ -24,6 +24,9 @@ function DisplayTime() {
     </div>
   );
 }
+
+export default MiscCard;
+
 export function MiscCard({ className = "", mouseSensitivity = 0, isCentered = false }: { className?: string, mouseSensitivity?: number, isCentered?: boolean }) {
   if (isCentered) {
     return (
