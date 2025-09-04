@@ -21,27 +21,26 @@ export default function Navigation(): ReactNode {
   return (
     <nav>
       <div
-        className={`flex flex-col bg-gray-300 max-md:mx-2 max-md:mt-2 mx-32 mt-4 p-1 rounded-full max-md:rounded-xl
-         `}
+        className={`flex flex-col bg-gray-300 max-md:mx-2 max-md:mt-2 mx-32 mt-3 p-1 rounded-full max-md:rounded-xl`}
       >
         <section className="flex flex-row w-full justify-between items-center max-md:px-4 max-md:py-1">
           {/*Mobile Mode*/}
           {mobile ? (
-            <FaTimes className="text-4xl sm:hidden" onClick={handleMobile} />
+            <FaTimes className="text-2xl sm:hidden" onClick={handleMobile} />
           ) : (
             <GiHamburgerMenu
-              className="text-4xl sm:hidden"
+              className="text-2xl sm:hidden"
               onClick={handleMobile}
             />
           )}
           
-          <a href="/" className="flex gap-2 text-4xl font-bold items-center">
+          <a href="/" className="flex gap-2 text-2xl font-bold items-center">
             <IoSearch className="text-blue-500 w-[70px]" />
             <TypewriterEffect
               words={[
-                { text: "Cedric", className: "text-4xl font-semibold" },
-                { text: "De", className: "text-4xl font-semibold" },
-                { text: "Leon", className: "text-4xl font-semibold" }
+                { text: "Cedric", className: "text-2xl font-semibold" },
+                { text: "De", className: "text-2xl font-semibold" },
+                { text: "Leon", className: "text-2xl font-semibold" }
               ]}
               className="place-self-center max-lg:hidden mb-1"
             />
@@ -50,7 +49,7 @@ export default function Navigation(): ReactNode {
           {/*Hidden on Mobile*/}
           <section className="flex flex-row gap-5 items-center max-sm:hidden">
             <SocialLinks />
-            <PiLineVerticalThin className="text-gray-700 text-3xl" />
+            <PiLineVerticalThin className="text-gray-700 text-xl" />
             <NavButton name="Resume" />
           </section>
         </section>
